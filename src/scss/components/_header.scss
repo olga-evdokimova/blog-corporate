@@ -1,0 +1,34 @@
+.header {
+    background-color: $white;
+    border-radius: 0 0 32px 32px;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+h1{
+    @include text-h1;
+}
+.nav {
+    &__list {
+        display: flex;
+        padding-bottom: 30px;
+    }
+  
+    a{
+        font-size: 12px;
+        font-weight: 500;
+        color: $title;
+        padding:0 18px;
+        height: 48px;
+        border-radius: 28px;
+        background-color: $bg-main;
+        margin-right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.burger { @include burger }
+.menu--active{
+    background-color: aquamarine;
+}

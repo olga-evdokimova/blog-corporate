@@ -1,12 +1,24 @@
 /* stylelint-disable */
 // Примерение , вставить в нужное место @include text-h1;
 @mixin text-h1 {
-   font-size: 32px;
-   line-height: 36px;
-   font-weight: 500;
-   color: $H;
+  font-size: 40px;
+  line-height: 36px;
+  font-weight: 500;
+  color: $H;
+  padding: 20px 0 30px;
 }
-
+@mixin text-h3 {
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 500;
+  color: $title;
+  @media(max-width: 1350px){
+         font-size: calc(20px + (32 - 20) * ((100vw - 320px) / (1350 - 320)));
+      }
+      @media(max-width: 1350px){
+         line-height: calc(24px + (36 - 24) * ((100vw - 320px) / (1350 - 320)));
+      }
+}
 // @mixin bg-cover {
 //   background-position: center;
 //   background-size: cover;
@@ -67,8 +79,7 @@ $browser-context: 16; // Default
   background-image: url("#{$pathToImage}.jpg");
   /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
   background-image: image-set(
-    /* stylelint-disable-next-line function-comma-newline-after */
-    "#{$pathToImage}.avif"type("image/avif"),
+    /* stylelint-disable-next-line function-comma-newline-after */ "#{$pathToImage}.avif"type("image/avif"),
     "#{$pathToImage}.webp"type("image/webp"),
     "#{$pathToImage}.jpg"type("image/jpg")
   );
