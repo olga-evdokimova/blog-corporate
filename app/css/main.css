@@ -1,0 +1,73 @@
+/* stylelint-disable */
+/* stylelint-disable */
+/* stylelint-disable */
+.custom-checkbox__field:checked + .custom-checkbox__content::after {
+  opacity: 1;
+}
+
+.custom-checkbox__field:focus + .custom-checkbox__content::before {
+  outline: 2px solid #f00;
+  outline-offset: 2px;
+}
+
+.custom-checkbox__field:disabled + .custom-checkbox__content {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* stylelint-disable */
+/* stylelint-disable */
+@font-face {
+  font-family: "CoFoSans";
+  src: url("../fonts/../fonts/CoFoSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CoFoSans";
+  src: url("../fonts/../fonts/CoFoSans-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+body {
+  font-family: "CoFoSans";
+  font-size: 16px;
+  font-weight: 400;
+  color: #8c94a8;
+  line-height: 1.5;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1350px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.page {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 500;
+  color: #2a2a30;
+}
+/*# sourceMappingURL=main.css.map */

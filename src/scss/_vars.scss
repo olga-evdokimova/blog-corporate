@@ -1,0 +1,28 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+// :root {
+//   // base
+
+//   --font-family: "Open Sans";
+//   --content-width: 1170px;
+//   --container-offset: 15px;
+//   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+// }
+//Переменные scss
+//подключение background-color: $title;
+$p: #8c94a8; //цвет текста p
+$H: #2a2a30; //цвет заголовков H1-h6 и в single
+$title: #282d3c; //цвет всех заголовков в маленькой карточке
+$bg-main: #f4f6fb; //Цвет фона всего main и кнопок
+$bg-btn: #007bfb; //цвет кнопок и hover
+$white: #fff;
+
+
+//шаблоны scss
+//подключение @extend %text;
+// %text-h1 {
+//    font-size: 32px;
+//    line-height: 36px;
+//    font-weight: 500;
+//    color: $H;
+// }
