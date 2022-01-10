@@ -1,5 +1,5 @@
 # Gulp - сборка MaxGraph
-https://github.com/maxdenaro/gulp-maxgraph
+<!-- https://github.com/maxdenaro/gulp-maxgraph -->
 > Используется Gulp 4
 
 ## Начало работы
