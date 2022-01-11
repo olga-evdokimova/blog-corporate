@@ -5,7 +5,10 @@
     position: absolute;
     left: 0;
     right: 0;
-    height: 204px;
+    height: 234px;
+    @media (max-width: 767px) {
+        height: 209px;
+    }
 }
 .header-top {
     background-color: $bg-main;
@@ -37,7 +40,7 @@
         }
     }
 }
-//  color: hsla(0,0%,100%,.64);
+
 h1 {
     @include text-h1;
 }
@@ -93,8 +96,18 @@ h1 {
                 }
             }
         }
+        @media (max-width: 420px) {
+            width: 48px;
+        }
     }
 }
 .burger {
     @include burger;
+}
+.breadcrumbs {
+    font-size: 12px;
+    display: flex;
+    padding-top: 12px;
+
+    
 }

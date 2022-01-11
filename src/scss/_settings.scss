@@ -45,7 +45,10 @@ body {
 .page {
     flex: 1 1 auto;
     background-color: $bg-main;
-    padding-top: 204px;
+    padding-top: 234px;
+      @media (max-width: 767px) {
+        padding-top: 209px;
+    }
 }
 //<ОБЩИЕ КЛАССЫ>============================================================================================
 ._blue {
@@ -64,15 +67,15 @@ body {
 
 //     @media (any-hover: hover) and (any-pointer: fine) {
 //         &:hover {
-//             transition: all 0.3s ease 0s;
 //             background-color: blue;
+//             transition: all 0.3s ease 0s;
 //         }
 //     }
 
 //     @media (max-width: 1025px) {
-//         &:focus {
-//             transition: all 0.3s ease 0s;
+//         &:focus {           
 //             background-color: orange;
+//             transition: all 0.3s ease 0s;
 //         }
 //     }
 // }

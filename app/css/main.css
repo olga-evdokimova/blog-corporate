@@ -64,7 +64,12 @@ body {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   background-color: #f4f6fb;
-  padding-top: 204px;
+  padding-top: 234px;
+}
+@media (max-width: 767px) {
+  .page {
+    padding-top: 209px;
+  }
 }
 
 ._blue {
@@ -80,7 +85,12 @@ body {
   position: absolute;
   left: 0;
   right: 0;
-  height: 204px;
+  height: 234px;
+}
+@media (max-width: 767px) {
+  .header {
+    height: 209px;
+  }
 }
 
 .header-top {
@@ -136,6 +146,16 @@ h1 {
   font-weight: 500;
   color: #2a2a30;
   padding: 20px 0 30px;
+}
+@media (max-width: 1350px) {
+  h1 {
+    font-size: calc(24px + 16 * (100vw - 320px) / 1030);
+  }
+}
+@media (max-width: 767px) {
+  h1 {
+    padding: 20px 0 15px;
+  }
 }
 
 .nav {
@@ -208,6 +228,11 @@ h1 {
     background-color: #55a5fb !important;
   }
 }
+@media (max-width: 420px) {
+  .nav a {
+    width: 48px;
+  }
+}
 
 .burger {
   display: none;
@@ -250,15 +275,72 @@ h1 {
   }
 }
 
+.breadcrumbs {
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 12px;
+}
+
+.footer {
+  height: 100px;
+}
+
 .posts {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding: 30px 0;
+  padding: 30px 0 0 0;
   margin-right: -3%;
 }
+
+.posts-btn {
+  width: 276px;
+  height: 48px;
+  margin: 10px auto 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 28px;
+  padding: 10px;
+  font-size: 14px;
+  color: #007bfb;
+  font-weight: 500;
+  background-color: #fff;
+  background-image: -o-radial-gradient(#007bfb, #0079fb00);
+  background-image: radial-gradient(#007bfb, #0079fb00);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 0% 0%;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+@media (any-hover: hover) and (any-pointer: fine) {
+  .posts-btn:hover {
+    border-radius: 8px;
+    color: #fff;
+    background-size: 500% 500%;
+    -webkit-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+  }
+}
+@media (max-width: 767px) {
+  .posts-btn {
+    width: 100%;
+  }
+}
+
 .post-card {
   -webkit-box-flex: 0;
   -ms-flex: 0 1 47%;
@@ -269,6 +351,9 @@ h1 {
   border-radius: 28px;
   padding: 20px 50px 20px 20px;
   min-height: 340px;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
 }
 @media (max-width: 767px) {
   .post-card {
@@ -304,14 +389,13 @@ h1 {
   font-weight: 500;
   color: #282d3c;
   padding-bottom: 30px;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
 }
 @media (max-width: 1350px) {
   .post-card__title {
     font-size: calc(20px + 12 * (100vw - 320px) / 1030);
-  }
-}
-@media (max-width: 1350px) {
-  .post-card__title {
     line-height: calc(24px + 12 * (100vw - 320px) / 1030);
   }
 }
@@ -324,6 +408,21 @@ h1 {
 @media (max-width: 767px) {
   .post-card__text {
     max-width: 384px;
+  }
+}
+@media (any-hover: hover) and (any-pointer: fine) {
+  .post-card:hover {
+    background-color: #007bfb;
+    color: rgba(255, 255, 255, 0.582);
+    -webkit-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+  }
+  .post-card:hover .post-card__title {
+    color: #fff;
+    -webkit-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
   }
 }
 /*# sourceMappingURL=main.css.map */
