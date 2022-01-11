@@ -1,15 +1,47 @@
 .header {
     background-color: $white;
     border-radius: 0 0 32px 32px;
-     box-shadow: 0 4px 4px rgb(0 0 0 / 8%);
+    box-shadow: 0 4px 4px rgb(0 0 0 / 8%);
     position: absolute;
     left: 0;
     right: 0;
-    height: 164px;
+    height: 204px;
 }
+.header-top {
+    background-color: $bg-main;
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    &__link {
+        width: 100%;
+        color: $p;
+        font-size: 14px;
+        transition: all 0.3s ease 0s;
+        &::before {
+            content: "\2039";
+            font-size: 20px;
+            padding-right: 10px;
+            display: inline-block;
+            transition: all 0.5s ease 0s;
+        }
+        @media (any-hover: hover) and (any-pointer: fine) {
+            &:hover {
+                transition: all 0.3s ease 0s;
+                color: $bg-btn;
+                &::before {
+                    transform: translateX(-10px);
+                    transition: all 0.5s ease 0s;
+                }
+            }
+        }
+    }
+}
+//  color: hsla(0,0%,100%,.64);
 h1 {
     @include text-h1;
 }
+
 .nav {
     position: relative;
     display: flex;
@@ -25,9 +57,9 @@ h1 {
                 display: inline-block;
                 background-color: $white;
                 width: 150px;
-               padding: 10px 0 10px;
+                padding: 10px 0 10px;
                 border-radius: 0 32px 32px 32px;
-                    box-shadow: 0 4px 4px rgb(0 0 0 / 8%);
+                box-shadow: 0 4px 4px rgb(0 0 0 / 8%);
                 a {
                     margin-bottom: 10px;
                     margin-left: 15px;
@@ -35,6 +67,7 @@ h1 {
             }
         }
     }
+
     a {
         font-size: 12px;
         font-weight: 500;
@@ -48,6 +81,18 @@ h1 {
         display: flex;
         justify-content: center;
         align-items: center;
+        transition: all 0.4s ease 0s;
+        @media (any-hover: hover) and (any-pointer: fine) {
+            &:hover {
+                border-radius: 8px;
+                background-image: radial-gradient(#fff, rgba(0, 0, 0, 0.061));
+                transition: all 0.4s ease 0s;
+                &._blue {
+                    background-image: none;
+                    background-color: #55a5fb !important;
+                }
+            }
+        }
     }
 }
 .burger {

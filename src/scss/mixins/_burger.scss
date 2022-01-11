@@ -6,7 +6,7 @@
     display: block;
     position: absolute;
     top: 7px;
-    left: 76px;
+    left: 65px;
     background-color: inherit;
     border: none;
     padding: 0;
@@ -19,8 +19,8 @@
       content: "";
       position: absolute;
       left: 0;
-      width: 5px;
-      height: 5px;
+      width: 4px;
+      height: 4px;
       border-radius: 50%;
       background-color: $bg-btn;
     }
@@ -36,8 +36,8 @@
     &__line {
       position: absolute;
       left: 20px;
-      width: 5px;
-      height: 5px;
+      width: 4px;
+      height: 4px;
       border-radius: 50%;
       background-color: $bg-btn;
     }

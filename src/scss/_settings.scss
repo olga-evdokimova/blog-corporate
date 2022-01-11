@@ -45,15 +45,13 @@ body {
 .page {
     flex: 1 1 auto;
     background-color: $bg-main;
-    padding-top: 164px;
+    padding-top: 204px;
 }
 //<ОБЩИЕ КЛАССЫ>============================================================================================
-._blue{
+._blue {
     background-color: $bg-btn !important;
     color: $white !important;
 }
-
-
 
 // .asd { //ссылка на всех устройствах
 //     display: block;
@@ -78,9 +76,6 @@ body {
 //         }
 //     }
 // }
-
-
-
 
 // настройки готовой сборки ---------------------------------
 // html {
