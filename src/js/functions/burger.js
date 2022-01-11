@@ -3,7 +3,7 @@
   const menu = document?.querySelector('[data-menu]');
 
   burger?.addEventListener('click', (e) => {
-    burger?.classList.toggle('burger--active');
+    // burger?.classList.toggle('burger--active');
     menu?.classList.toggle('menu--active');
   });
 })();

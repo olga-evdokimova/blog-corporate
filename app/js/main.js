@@ -72,7 +72,7 @@ __webpack_require__.r(__webpack_exports__);
   var burger = (_document = document) === null || _document === void 0 ? void 0 : _document.querySelector('[data-burger]');
   var menu = (_document2 = document) === null || _document2 === void 0 ? void 0 : _document2.querySelector('[data-menu]');
   burger === null || burger === void 0 ? void 0 : burger.addEventListener('click', function (e) {
-    burger === null || burger === void 0 ? void 0 : burger.classList.toggle('burger--active');
+    // burger?.classList.toggle('burger--active');
     menu === null || menu === void 0 ? void 0 : menu.classList.toggle('menu--active');
   });
 })();
