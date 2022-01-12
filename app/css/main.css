@@ -37,7 +37,6 @@ body {
   font-size: 16px;
   font-weight: 400;
   color: #8c94a8;
-  line-height: 1.5;
 }
 
 .wrapper {
@@ -142,10 +141,10 @@ body {
 
 h1 {
   font-size: 40px;
-  line-height: 36px;
+  line-height: 1.2;
   font-weight: 500;
   color: #2a2a30;
-  padding: 20px 0 30px;
+  margin: 20px 0 30px;
 }
 @media (max-width: 1350px) {
   h1 {
@@ -154,7 +153,8 @@ h1 {
 }
 @media (max-width: 767px) {
   h1 {
-    padding: 20px 0 15px;
+    margin: 15px 0 15px;
+    line-height: 1.16;
   }
 }
 
@@ -180,7 +180,7 @@ h1 {
     left: -15px;
     display: inline-block;
     background-color: #fff;
-    width: 150px;
+    width: 78px;
     padding: 10px 0 10px;
     border-radius: 0 32px 32px 32px;
     -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.08);
@@ -276,11 +276,28 @@ h1 {
 }
 
 .breadcrumbs {
-  font-size: 12px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding-top: 12px;
+}
+.breadcrumbs li {
+  padding-right: 12px;
+}
+.breadcrumbs li a {
+  color: #8c94a8;
+  font-size: 12px;
+  line-height: 1;
+}
+.breadcrumbs li:not(:first-child)::before {
+  content: "•";
+  color: #bcc3d2;
+  padding-right: 10px;
+  font-size: 12px;
+  line-height: 1;
+}
+.breadcrumbs li:last-child a {
+  color: #bcc3d2;
 }
 
 .footer {
@@ -316,23 +333,44 @@ h1 {
   color: #007bfb;
   font-weight: 500;
   background-color: #fff;
-  background-image: -o-radial-gradient(#007bfb, #0079fb00);
-  background-image: radial-gradient(#007bfb, #0079fb00);
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: 0% 0%;
-  -webkit-transition: all 0.5s ease 0s;
-  -o-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: color 0.5s ease 0s;
+  -o-transition: color 0.5s ease 0s;
+  transition: color 0.5s ease 0s;
+}
+.posts-btn:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -76px;
+  background: #007bfb;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: -webkit-transform 0.5s ease-out 0s;
+  transition: -webkit-transform 0.5s ease-out 0s;
+  -o-transition: transform 0.5s ease-out 0s;
+  transition: transform 0.5s ease-out 0s;
+  transition: transform 0.5s ease-out 0s, -webkit-transform 0.5s ease-out 0s;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
 }
 @media (any-hover: hover) and (any-pointer: fine) {
   .posts-btn:hover {
     border-radius: 8px;
     color: #fff;
-    background-size: 500% 500%;
     -webkit-transition: all 0.5s ease 0s;
     -o-transition: all 0.5s ease 0s;
     transition: all 0.5s ease 0s;
+  }
+  .posts-btn:hover:before {
+    -webkit-transform: scale(2);
+    -ms-transform: scale(2);
+    transform: scale(2);
   }
 }
 @media (max-width: 767px) {
@@ -400,6 +438,7 @@ h1 {
   }
 }
 .post-card__text {
+  color: #8c94a8;
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -409,6 +448,9 @@ h1 {
   .post-card__text {
     max-width: 384px;
   }
+}
+.post-card__date {
+  color: #8c94a8;
 }
 @media (any-hover: hover) and (any-pointer: fine) {
   .post-card:hover {

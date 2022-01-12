@@ -17,20 +17,34 @@
    color: $bg-btn;
    font-weight: 500;
    background-color: $white;
-   background-image: radial-gradient($bg-btn, #0079fb00);
-   background-position: 50% 50%;
-   background-repeat: no-repeat;
-   background-size: 0% 0%;
-   transition: all 0.5s ease 0s;
+   transform: perspective(1px) translateZ(0);
+   position: relative;
+   overflow: hidden;
+   transition: color 0.5s ease 0s;
+
+   &:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: -76px;
+      background: $bg-btn;
+      transform: scale(0);
+      transition: transform .5s ease-out 0s;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+   }
    @media (any-hover: hover) and (any-pointer: fine) {
       &:hover {
          border-radius: 8px;
          color: $white;
-         background-size: 500% 500%;
          transition: all 0.5s ease 0s;
       }
+      &:hover:before {
+         transform: scale(2);
+      }
    }
-   @media (max-width: 767px){
+   @media (max-width: 767px) {
       width: 100%;
    }
 }
@@ -43,7 +57,7 @@
    border-radius: 28px;
    padding: 20px 50px 20px 20px;
    min-height: 340px;
-    transition: all 0.5s ease 0s;
+   transition: all 0.5s ease 0s;
 
    @media (max-width: 767px) {
       flex: 0 1 100%;
@@ -64,9 +78,10 @@
    &__title {
       @include text-h3;
       padding-bottom: 30px;
-       transition: all 0.5s ease 0s;
+      transition: all 0.5s ease 0s;
    }
    &__text {
+      color: $p;
       flex: 1 1 auto;
       margin-bottom: 20px;
       @media (max-width: 767px) {
@@ -74,15 +89,16 @@
       }
    }
    &__date {
+      color: $p;
    }
-  
+
    @media (any-hover: hover) and (any-pointer: fine) {
       &:hover {
          background-color: $bg-btn;
          color: rgba(255, 255, 255, 0.582);
-         .post-card__title{
+         .post-card__title {
             color: $white;
-             transition: all 0.5s ease 0s;
+            transition: all 0.5s ease 0s;
          }
          transition: all 0.5s ease 0s;
       }

@@ -2,15 +2,16 @@
 // Примерение , вставить в нужное место @include text-h1;
 @mixin text-h1 {
   font-size: 40px;
-  line-height: 36px;
+  line-height: 1.2;
   font-weight: 500;
   color: $H;
-  padding: 20px 0 30px;
+  margin: 20px 0 30px;
   @media (max-width: 1350px) {
     font-size: calc(24px + (40 - 24) * ((100vw - 320px) / (1350 - 320)));
   }
    @media (max-width: 767px) {
-       padding: 20px 0 15px;
+       margin: 15px 0 15px;
+       line-height: 1.16;
     }
 }
 @mixin text-h3 {

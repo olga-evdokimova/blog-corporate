@@ -59,7 +59,7 @@ h1 {
                 left: -15px;
                 display: inline-block;
                 background-color: $white;
-                width: 150px;
+                width: 78px;
                 padding: 10px 0 10px;
                 border-radius: 0 32px 32px 32px;
                 box-shadow: 0 4px 4px rgb(0 0 0 / 8%);
@@ -105,9 +105,26 @@ h1 {
     @include burger;
 }
 .breadcrumbs {
-    font-size: 12px;
     display: flex;
     padding-top: 12px;
-
-    
+    li {
+        padding-right: 12px;
+        & a {
+            color: $p;
+            font-size: 12px;
+            line-height: 1;
+        }
+        &:not(:first-child)::before {
+            content: "\2022";
+            color: $breadcrumbs;
+            padding-right: 10px;
+            font-size: 12px;
+            line-height: 1;
+        }
+        &:last-child {
+            & a {
+                color: $breadcrumbs;
+            }
+        }
+    }
 }

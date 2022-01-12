@@ -4,6 +4,7 @@
   border: 0px;
   -webkit-tap-highlight-color: transparent;
   overflow-anchor: none;
+ 
 }
 
 *,
@@ -35,6 +36,7 @@ html,
 body {
   height: 100%;
   min-width: 320px;
+  
 }
 
 body {
@@ -42,6 +44,7 @@ body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+ 
 }
 
 input::-ms-clear {
