@@ -7,7 +7,14 @@
   \*******************************/
 /***/ (() => {
 
-console.log('components');
+//Плавное появление тукста при загрузке
+var headerTitle = document.querySelector('.header-title');
+var breadcrumbs = document.querySelector('.breadcrumbs');
+
+window.onload = function () {
+  headerTitle.classList.add('visible');
+  breadcrumbs.classList.add('visible');
+};
 
 /***/ }),
 

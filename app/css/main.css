@@ -139,6 +139,28 @@ body {
   }
 }
 
+.invisible {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translate(0px, 50%);
+  -ms-transform: translate(0px, 50%);
+  transform: translate(0px, 50%);
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+.visible {
+  opacity: 1;
+  -webkit-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  visibility: visible;
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
 h1 {
   font-size: 40px;
   line-height: 1.2;

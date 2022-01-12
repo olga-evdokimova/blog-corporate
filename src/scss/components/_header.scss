@@ -40,6 +40,18 @@
         }
     }
 }
+.invisible {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(0px, 50%);
+    transition: all 0.8s ease 0s;
+}
+.visible {
+    opacity: 1;
+    transform: translate(0px, 0px);
+    visibility: visible;
+    transition: all 0.8s ease 0s;
+}
 
 h1 {
     @include text-h1;
@@ -104,9 +116,11 @@ h1 {
 .burger {
     @include burger;
 }
+
 .breadcrumbs {
     display: flex;
     padding-top: 12px;
+     
     li {
         padding-right: 12px;
         & a {
