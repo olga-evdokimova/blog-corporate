@@ -37,6 +37,8 @@ body {
   font-size: 16px;
   font-weight: 400;
   color: #8c94a8;
+  line-height: 1.5;
+  background-color: #f4f6fb;
 }
 
 .wrapper {
@@ -62,13 +64,6 @@ body {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  background-color: #f4f6fb;
-  padding-top: 234px;
-}
-@media (max-width: 767px) {
-  .page {
-    padding-top: 209px;
-  }
 }
 
 ._blue {
@@ -76,25 +71,57 @@ body {
   color: #fff !important;
 }
 
+.invisible-text {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translate(0px, 50%);
+  -ms-transform: translate(0px, 50%);
+  transform: translate(0px, 50%);
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+.visible-text {
+  opacity: 1;
+  -webkit-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  visibility: visible;
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+.invisible {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.8s ease 0.3s;
+  -o-transition: all 0.8s ease 0.3s;
+  transition: all 0.8s ease 0.3s;
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all 0.8s ease 0.3s;
+  -o-transition: all 0.8s ease 0.3s;
+  transition: all 0.8s ease 0.3s;
+}
+
 .header {
   background-color: #fff;
   border-radius: 0 0 32px 32px;
   -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.08);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.08);
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 234px;
-}
-@media (max-width: 767px) {
-  .header {
-    height: 209px;
-  }
 }
 
 .header-top {
+  position: fixed;
+  z-index: 1;
   background-color: #f4f6fb;
   height: 40px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -137,28 +164,6 @@ body {
     -o-transition: all 0.5s ease 0s;
     transition: all 0.5s ease 0s;
   }
-}
-
-.invisible {
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transform: translate(0px, 50%);
-  -ms-transform: translate(0px, 50%);
-  transform: translate(0px, 50%);
-  -webkit-transition: all 0.8s ease 0s;
-  -o-transition: all 0.8s ease 0s;
-  transition: all 0.8s ease 0s;
-}
-
-.visible {
-  opacity: 1;
-  -webkit-transform: translate(0px, 0px);
-  -ms-transform: translate(0px, 0px);
-  transform: translate(0px, 0px);
-  visibility: visible;
-  -webkit-transition: all 0.8s ease 0s;
-  -o-transition: all 0.8s ease 0s;
-  transition: all 0.8s ease 0s;
 }
 
 h1 {
@@ -301,7 +306,7 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 12px;
+  padding-top: 52px;
 }
 .breadcrumbs li {
   padding-right: 12px;
@@ -324,6 +329,7 @@ h1 {
 
 .footer {
   height: 100px;
+  background-color: #fff;
 }
 
 .posts {
@@ -411,9 +417,9 @@ h1 {
   border-radius: 28px;
   padding: 20px 50px 20px 20px;
   min-height: 340px;
-  -webkit-transition: all 0.5s ease 0s;
-  -o-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
 }
 @media (max-width: 767px) {
   .post-card {
@@ -449,9 +455,6 @@ h1 {
   font-weight: 500;
   color: #282d3c;
   padding-bottom: 30px;
-  -webkit-transition: all 0.5s ease 0s;
-  -o-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
 }
 @media (max-width: 1350px) {
   .post-card__title {
@@ -477,16 +480,16 @@ h1 {
 @media (any-hover: hover) and (any-pointer: fine) {
   .post-card:hover {
     background-color: #007bfb;
-    color: rgba(255, 255, 255, 0.582);
-    -webkit-transition: all 0.5s ease 0s;
-    -o-transition: all 0.5s ease 0s;
-    transition: all 0.5s ease 0s;
   }
   .post-card:hover .post-card__title {
     color: #fff;
     -webkit-transition: all 0.5s ease 0s;
     -o-transition: all 0.5s ease 0s;
     transition: all 0.5s ease 0s;
+  }
+  .post-card:hover .post-card__text,
+.post-card:hover .post-card__date {
+    color: rgba(255, 255, 255, 0.582);
   }
 }
 /*# sourceMappingURL=main.css.map */

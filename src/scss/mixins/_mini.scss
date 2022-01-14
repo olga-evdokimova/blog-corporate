@@ -58,11 +58,11 @@
 
 //=================================
 //Эта функция использует интерполяцию строк Sass для добавления em к значению. Обратите внимание, что параметр $context имеет значение по умолчанию $browser-context (то есть, что бы вы ни установили для этой переменной). Это означает, что при вызове функции в вашем Sass вам нужно только определить $pixelsзначение, и математика будет рассчитана относительно $browser-context— в данном случае — 16px.
-$browser-context: 16; // Default
+// $browser-context: 16; // Default
 
-@function rem($pixels, $context: $browser-context) {
-  @return #{$pixels/$context}rem;
-}
+// @function rem($pixels, $context: $browser-context) {
+//   @return #{$pixels/$context}rem;
+// }
 // Пример использования:
 // h1 {
 //   font-size: em(32);
@@ -80,12 +80,12 @@ $browser-context: 16; // Default
 // }
 //==================================
 
-@mixin image-set($pathToImage) {
-  background-image: url("#{$pathToImage}.jpg");
-  /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
-  background-image: image-set(
-    /* stylelint-disable-next-line function-comma-newline-after */ "#{$pathToImage}.avif"type("image/avif"),
-    "#{$pathToImage}.webp"type("image/webp"),
-    "#{$pathToImage}.jpg"type("image/jpg")
-  );
-}
+// @mixin image-set($pathToImage) {
+//   background-image: url("#{$pathToImage}.jpg");
+//   /* stylelint-disable-next-line declaration-block-no-duplicate-properties */
+//   background-image: image-set(
+//     /* stylelint-disable-next-line function-comma-newline-after */ "#{$pathToImage}.avif"type("image/avif"),
+//     "#{$pathToImage}.webp"type("image/webp"),
+//     "#{$pathToImage}.jpg"type("image/jpg")
+//   );
+// }

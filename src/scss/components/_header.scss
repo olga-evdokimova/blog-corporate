@@ -2,17 +2,13 @@
     background-color: $white;
     border-radius: 0 0 32px 32px;
     box-shadow: 0 4px 4px rgb(0 0 0 / 8%);
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 234px;
-    @media (max-width: 767px) {
-        height: 209px;
-    }
 }
 .header-top {
+    position: fixed;
+    z-index: 1;
     background-color: $bg-main;
     height: 40px;
+    width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -40,18 +36,7 @@
         }
     }
 }
-.invisible {
-    opacity: 0;
-    visibility: hidden;
-    transform: translate(0px, 50%);
-    transition: all 0.8s ease 0s;
-}
-.visible {
-    opacity: 1;
-    transform: translate(0px, 0px);
-    visibility: visible;
-    transition: all 0.8s ease 0s;
-}
+
 
 h1 {
     @include text-h1;
@@ -119,7 +104,7 @@ h1 {
 
 .breadcrumbs {
     display: flex;
-    padding-top: 12px;
+    padding-top: 52px;
      
     li {
         padding-right: 12px;
