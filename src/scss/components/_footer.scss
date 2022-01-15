@@ -1,4 +1,25 @@
-.footer{
-    height: 100px;
+.footer {
     background-color: $white;
+    border-radius: 32px 32px 0 0;
+}
+.footer {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 0 60px;
+    }
+    &__copy {
+    }
+    &__info {
+        padding-top: 30px;
+        line-height: 12px;
+        font-size: 8px;
+        text-transform: uppercase;
+        a {
+            color: $breadcrumbs;
+        }
+    }
+    &__logo {
+    }
 }
