@@ -5,8 +5,8 @@ body {
     font-size: 16px;
     font-weight: 400;
     color: $p;
-     line-height: 1.5;
-      background-color: $bg-main;
+    line-height: 1.5;
+    background-color: $bg-main;
 }
 
 //<ОБОЛОЧКА>===========================================================================================================
@@ -23,37 +23,32 @@ body {
     max-width: 1350px;
     padding: 0 15px;
     margin: 0 auto;
-
-    // @media (max-width: 1200px) {
-    //     .container {
-    //         max-width: 970px;
-    //     }
-    // }
-    // @media (max-width: 992px) {
-    //     .container {
-    //         max-width: 750px;
-    //     }
-    // }
-    // @media (max-width: 767px) {
-    //     .container {
-    //         max-width: none;
-    //     }
-    // }
-    // @media (max-width: 420px) {
-    // }
 }
 //<ОСНОВНОЙ БЛОК>====================================================================================================
 .page {
     flex: 1 1 auto;
-    // padding-top: 250px;
-    //   @media (max-width: 767px) {
-    //     padding-top: 210px;
-    // }
+    
 }
 //<ОБЩИЕ КЛАССЫ>============================================================================================
 ._blue {
     background-color: $bg-btn !important;
     color: $white !important;
+}
+.logo {
+  width: 100px;
+  @media (max-width: 767px){
+      width: 80px;
+  }
+  @media (max-width: 420px){
+      width: 60px;
+  }
+   img{
+       max-width: 100%;
+   }
+}
+
+h1 {
+    @include text-h1;
 }
 //Анимация ============================================
 .invisible-text {
@@ -96,7 +91,7 @@ body {
 //     }
 
 //     @media (max-width: 1025px) {
-//         &:focus {           
+//         &:focus {
 //             background-color: orange;
 //             transition: all 0.3s ease 0s;
 //         }

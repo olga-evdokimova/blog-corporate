@@ -71,6 +71,42 @@ body {
   color: #fff !important;
 }
 
+.logo {
+  width: 100px;
+}
+@media (max-width: 767px) {
+  .logo {
+    width: 80px;
+  }
+}
+@media (max-width: 420px) {
+  .logo {
+    width: 60px;
+  }
+}
+.logo img {
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 500;
+  color: #2a2a30;
+  margin: 20px 0 30px;
+}
+@media (max-width: 1350px) {
+  h1 {
+    font-size: calc(24px + 16 * (100vw - 320px) / 1030);
+  }
+}
+@media (max-width: 767px) {
+  h1 {
+    margin: 15px 0 15px;
+    line-height: 1.16;
+  }
+}
+
 .invisible-text {
   opacity: 0;
   visibility: hidden;
@@ -166,22 +202,54 @@ body {
   }
 }
 
-h1 {
-  font-size: 40px;
-  line-height: 1.2;
-  font-weight: 500;
-  color: #2a2a30;
-  margin: 20px 0 30px;
+.header-nav {
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
-@media (max-width: 1350px) {
-  h1 {
-    font-size: calc(24px + 16 * (100vw - 320px) / 1030);
-  }
+.header-nav__menu-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 60px;
 }
 @media (max-width: 767px) {
-  h1 {
-    margin: 15px 0 15px;
-    line-height: 1.16;
+  .header-nav__menu-list {
+    padding-right: 0px;
+  }
+}
+.header-nav__menu-list li {
+  padding-right: 20px;
+}
+@media (max-width: 767px) {
+  .header-nav__menu-list li {
+    padding-right: 10px;
+  }
+}
+.header-nav__menu-list li:first-child a {
+  color: #8c94a8;
+}
+.header-nav__menu-list li a {
+  font-size: 14px;
+  font-weight: 500;
+  color: #282d3c;
+}
+
+.header-logo {
+  margin-right: 20px;
+}
+@media (max-width: 420px) {
+  .header-logo {
+    display: none;
   }
 }
 
@@ -191,6 +259,11 @@ h1 {
   display: -ms-flexbox;
   display: flex;
   padding-bottom: 30px;
+}
+@media (max-width: 420px) {
+  .nav {
+    padding-bottom: 15px;
+  }
 }
 .nav__list {
   display: -webkit-box;
@@ -306,7 +379,12 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 52px;
+  padding-top: 20px;
+}
+@media (max-width: 420px) {
+  .breadcrumbs {
+    display: none;
+  }
 }
 .breadcrumbs li {
   padding-right: 12px;
@@ -459,6 +537,11 @@ h1 {
 @media (max-width: 767px) {
   .posts-btn {
     width: 100%;
+  }
+}
+@media (max-width: 420px) {
+  .posts-btn {
+    margin-bottom: 30px;
   }
 }
 
