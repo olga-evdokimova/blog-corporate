@@ -1,9 +1,6 @@
 .header {
-
 }
 .header-top {
-    position: fixed;
-    z-index: 2;
     background-color: $bg-main;
     height: 40px;
     width: 100%;
@@ -37,39 +34,47 @@
 .header-body {
     background-color: $white;
     border-radius: 0 0 32px 32px;
-    box-shadow: 0 4px 4px rgb(0 0 0 / 8%);
     z-index: 1;
     transition: all 1s ease 0s;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 330px;
-    @media (max-width: 767px){
-        height: 280px;
-    }
-    @media (max-width: 420px){
-        height: 210px;
-    }
+    // height: 145px;
+}
+.box-shadow {
+    box-shadow: 0 4px 4px rgb(0 0 0 / 8%);
 }
 .header-nav {
-    margin-top: 60px;
+    margin: 15px 0;
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    
     &__menu {
+        width: 100%;
     }
     &__menu-list {
         display: flex;
+        justify-content: flex-end;
         padding-right: 60px;
         @media (max-width: 767px) {
             padding-right: 0px;
         }
+        @media (max-width: 420px){
+            justify-content: flex-start;
+        }
+        
         li {
             padding-right: 20px;
             @media (max-width: 767px) {
                 padding-right: 10px;
+            }
+            @media (max-width: 420px){
+                &:last-child{
+                    padding-right: 0;
+                }
             }
             &:first-child {
                 a {
@@ -155,7 +160,6 @@
 
 .breadcrumbs {
     display: flex;
-    padding-top: 20px;
     @media (max-width: 420px) {
         display: none;
     }

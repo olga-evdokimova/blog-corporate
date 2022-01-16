@@ -8,12 +8,12 @@
 /***/ (() => {
 
 //Плавное появление тукста при загрузке
-var headerTitle = document.querySelector('.header-title');
+var title = document.querySelector('.title');
 var breadcrumbs = document.querySelector('.breadcrumbs');
 var anim = document.querySelectorAll('.anim');
 
 window.onload = function () {
-  headerTitle.classList.add('visible-text');
+  title.classList.add('visible-text');
   breadcrumbs.classList.add('visible-text');
   anim.forEach(function (item) {
     return item.classList.add('visible');
@@ -21,37 +21,46 @@ window.onload = function () {
 }; //Плавный header===============================
 
 
-var header = document.querySelector('.header-body');
-var headerHeight = header.offsetHeight; //хедер виден
+var headerBody = document.querySelector('.header-body');
+var headerHeight = headerBody.offsetHeight;
+var headerTop = document.querySelector('.header-top'); //хедер виден
 
 var lastScrollTop = 0;
 
 var open = function open() {
-  header.classList.add("header-open");
-  header.classList.remove('header-close');
+  headerBody.classList.add("header-open");
+  headerBody.classList.remove('header-close'); // console.log('open');
 };
 
 var close = function close() {
-  //добавляем стили где хедер не виден
-  header.classList.add("header-close"); //убираем стили где хедер виден
-
-  header.classList.remove('header-open');
+  headerBody.classList.add("header-close");
+  headerBody.classList.remove('header-open'); // console.log('close');
 };
 
 window.addEventListener('scroll', function (event) {
   //в переменную записываем текущее значение скролла
   var scrollDistance = window.scrollY;
   var scrollDown = scrollDistance > lastScrollTop;
-  var a = scrollY;
+  var a = scrollY; // console.log(a);
+  // console.log(scrollDown);
 
   if (scrollDown) {
+    if (a > 2) {
+      headerBody.classList.add('box-shadow');
+    } else {}
+
     if (a > 200) {
-      close(); //если скролл вниз хедер не виден
+      close();
+    } else {
+      open();
     }
   } else {
-    open(); //если скролл вверх хедер виден
-  } //начальное значение скролла равно текущему значению
+    open();
 
+    if (a < 200) {
+      headerBody.classList.remove('box-shadow');
+    }
+  }
 
   lastScrollTop = scrollDistance;
 }); //===============================
