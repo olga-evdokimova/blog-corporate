@@ -1,11 +1,9 @@
 .header {
-    background-color: $white;
-    border-radius: 0 0 32px 32px;
-    box-shadow: 0 4px 4px rgb(0 0 0 / 8%);
+
 }
 .header-top {
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     background-color: $bg-main;
     height: 40px;
     width: 100%;
@@ -36,8 +34,23 @@
         }
     }
 }
-.header-body{
-    // display: none;
+.header-body {
+    background-color: $white;
+    border-radius: 0 0 32px 32px;
+    box-shadow: 0 4px 4px rgb(0 0 0 / 8%);
+    z-index: 1;
+    transition: all 1s ease 0s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 330px;
+    @media (max-width: 767px){
+        height: 280px;
+    }
+    @media (max-width: 420px){
+        height: 210px;
+    }
 }
 .header-nav {
     margin-top: 60px;
@@ -50,12 +63,12 @@
     &__menu-list {
         display: flex;
         padding-right: 60px;
-        @media (max-width: 767px){
+        @media (max-width: 767px) {
             padding-right: 0px;
         }
         li {
             padding-right: 20px;
-            @media (max-width: 767px){
+            @media (max-width: 767px) {
                 padding-right: 10px;
             }
             &:first-child {
@@ -71,9 +84,9 @@
         }
     }
 }
-.header-logo{
-     margin-right:20px;
-    @media (max-width: 420px){
+.header-logo {
+    margin-right: 20px;
+    @media (max-width: 420px) {
         display: none;
     }
 }
@@ -81,8 +94,8 @@
     position: relative;
     display: flex;
     padding-bottom: 30px;
-     @media (max-width: 420px){
-       padding-bottom: 15px;
+    @media (max-width: 420px) {
+        padding-bottom: 15px;
     }
     &__list {
         display: flex;
@@ -143,7 +156,7 @@
 .breadcrumbs {
     display: flex;
     padding-top: 20px;
- @media (max-width: 420px){
+    @media (max-width: 420px) {
         display: none;
     }
     li {

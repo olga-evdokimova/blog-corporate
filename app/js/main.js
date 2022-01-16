@@ -18,7 +18,43 @@ window.onload = function () {
   anim.forEach(function (item) {
     return item.classList.add('visible');
   });
+}; //Плавный header===============================
+
+
+var header = document.querySelector('.header-body');
+var headerHeight = header.offsetHeight; //хедер виден
+
+var lastScrollTop = 0;
+
+var open = function open() {
+  header.classList.add("header-open");
+  header.classList.remove('header-close');
 };
+
+var close = function close() {
+  //добавляем стили где хедер не виден
+  header.classList.add("header-close"); //убираем стили где хедер виден
+
+  header.classList.remove('header-open');
+};
+
+window.addEventListener('scroll', function (event) {
+  //в переменную записываем текущее значение скролла
+  var scrollDistance = window.scrollY;
+  var scrollDown = scrollDistance > lastScrollTop;
+  var a = scrollY;
+
+  if (scrollDown) {
+    if (a > 200) {
+      close(); //если скролл вниз хедер не виден
+    }
+  } else {
+    open(); //если скролл вверх хедер виден
+  } //начальное значение скролла равно текущему значению
+
+
+  lastScrollTop = scrollDistance;
+}); //===============================
 
 /***/ }),
 
