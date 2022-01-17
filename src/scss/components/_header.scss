@@ -1,5 +1,4 @@
-.header {
-}
+
 .header-top {
     background-color: $bg-main;
     height: 40px;
@@ -40,13 +39,11 @@
     top: 0;
     left: 0;
     width: 100%;
-    // height: 145px;
 }
 
 .header-nav {
     margin: 15px 0;
     display: flex;
-    // flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 
@@ -170,10 +167,10 @@
     }
     li {
         padding-right: 12px;
-        text-overflow: ellipsis; //образка длинных блоков с текстом
-        overflow: hidden; //прятать выходящий за пределы текст
-        max-width: 250px; //ширина блока с текстом
-        white-space: nowrap; //запрет на перенос текста
+        text-overflow: ellipsis; 
+        overflow: hidden; 
+        max-width: 250px; 
+        white-space: nowrap; 
         & a {
             color: $p;
             font-size: 12px;
