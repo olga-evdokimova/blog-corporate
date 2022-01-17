@@ -254,9 +254,9 @@ h1 {
 }
 @media (max-width: 420px) {
   .header-nav__menu-list {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 }
 .header-nav__menu-list li {
