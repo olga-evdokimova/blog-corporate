@@ -294,13 +294,21 @@ strong {
     padding-right: 0;
   }
 }
-.header-nav__menu-list li:first-child a {
-  color: #8c94a8;
-}
 .header-nav__menu-list li a {
   font-size: 14px;
   font-weight: 500;
   color: #282d3c;
+}
+@media (any-hover: hover) and (any-pointer: fine) {
+  .header-nav__menu-list li a:hover {
+    color: #007bfb;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+}
+.header-nav__menu-list li:first-child a {
+  color: #8c94a8;
 }
 
 .header-logo {
@@ -456,6 +464,14 @@ strong {
   color: #8c94a8;
   font-size: 12px;
   line-height: 1;
+}
+@media (any-hover: hover) and (any-pointer: fine) {
+  .breadcrumbs li a:hover {
+    color: #007bfb;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
 }
 .breadcrumbs li:not(:first-child)::before {
   content: "•";
@@ -803,13 +819,5 @@ strong {
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
   }
-}
-
-Box-text {
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  width: 100%;
-  white-space: nowrap;
 }
 /*# sourceMappingURL=main.css.map */

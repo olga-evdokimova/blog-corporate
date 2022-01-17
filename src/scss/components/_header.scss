@@ -74,16 +74,23 @@
                     padding-right: 0;
                 }
             }
+            & a {
+                font-size: 14px;
+                font-weight: 500;
+                color: $title;
+                @media (any-hover: hover) and (any-pointer: fine) {
+                    &:hover {
+                        color: $bg-btn;
+                        transition: all 0.3s ease 0s;
+                    }
+                }
+            }
             &:first-child {
                 a {
                     color: $p;
                 }
             }
-            & a {
-                font-size: 14px;
-                font-weight: 500;
-                color: $title;
-            }
+            
         }
     }
 }
@@ -171,6 +178,12 @@
             color: $p;
             font-size: 12px;
             line-height: 1;
+            @media (any-hover: hover) and (any-pointer: fine) {
+                &:hover {
+                    color: $bg-btn;
+                    transition: all 0.3s ease 0s;
+                }
+            }
         }
         &:not(:first-child)::before {
             content: "\2022";
