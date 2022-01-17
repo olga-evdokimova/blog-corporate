@@ -6,7 +6,6 @@ body {
     font-weight: 400;
     color: $p;
     line-height: 1.5;
-    
 }
 
 //<ОБОЛОЧКА>===========================================================================================================
@@ -27,12 +26,10 @@ body {
 //<ОСНОВНОЙ БЛОК>====================================================================================================
 .page {
     flex: 1 1 auto;
-    
 }
-.page-bg{
-background-color: $bg-main;
-padding-bottom: 40px;
-
+.page-bg {
+    background-color: $bg-main;
+    padding-bottom: 40px;
 }
 //<ОБЩИЕ КЛАССЫ>============================================================================================
 ._blue {
@@ -40,34 +37,48 @@ padding-bottom: 40px;
     color: $white !important;
 }
 .logo {
-  width: 100px;
-  @media (max-width: 767px){
-      width: 80px;
-  }
-  @media (max-width: 420px){
-      width: 60px;
-  }
-   img{
-       max-width: 100%;
-   }
+    width: 100px;
+    @media (max-width: 767px) {
+        width: 80px;
+    }
+    @media (max-width: 420px) {
+        width: 60px;
+    }
+    img {
+        max-width: 100%;
+    }
 }
 
 h1 {
     @include text-h1;
 }
 
+p,
+strong {
+    letter-spacing: -0.01em;
+}
+.date {
+    color: $p;
+    font-size: 14px;
+}
+.title {
+    margin: 20px 0 30px;
+    @media (max-width: 767px) {
+        margin: 15px 0 15px;
+    }
+}
 //Анимация ============================================
 .invisible-text {
     opacity: 0;
     visibility: hidden;
     transform: translate(0px, 50%);
-    transition: all 0.8s ease 0s;
+    transition: all 0.8s ease 0.5s;
 }
 .visible-text {
     opacity: 1;
     transform: translate(0px, 0px);
     visibility: visible;
-    transition: all 0.8s ease 0s;
+    transition: all 0.8s ease 0.5s;
 }
 .invisible {
     opacity: 0;
@@ -84,15 +95,12 @@ h1 {
 }
 //=============================
 .header-close {
-  transform: translate(0px, -40px);
- 
+    transform: translate(0px, -40px);
 }
 
 .header-open {
-  transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
 }
-
-
 
 //================================
 // .asd { //ссылка на всех устройствах

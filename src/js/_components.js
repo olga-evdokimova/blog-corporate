@@ -1,14 +1,15 @@
 //Плавное появление тукста при загрузке
-const title = document.querySelector('.title');
-const breadcrumbs = document.querySelector('.breadcrumbs');
+const animText = document.querySelectorAll('.anim-text');
 const anim = document.querySelectorAll('.anim');
 
 
 window.onload = () => {
-    title.classList.add('visible-text');
-    breadcrumbs.classList.add('visible-text');
+   animText.forEach((item) => item.classList.add('visible-text'));
     anim.forEach((item) => item.classList.add('visible'));
 }
+
+
+
 //Плавный header===============================
 const headerBody = document.querySelector('.header-body');
 const headerHeight = headerBody.offsetHeight;

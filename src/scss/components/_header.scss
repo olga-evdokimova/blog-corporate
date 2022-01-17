@@ -49,7 +49,7 @@
     // flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    
+
     &__menu {
         width: 100%;
     }
@@ -60,17 +60,17 @@
         @media (max-width: 767px) {
             padding-right: 0px;
         }
-        @media (max-width: 420px){
+        @media (max-width: 420px) {
             justify-content: flex-start;
         }
-        
+
         li {
             padding-right: 20px;
             @media (max-width: 767px) {
                 padding-right: 10px;
             }
-            @media (max-width: 420px){
-                &:last-child{
+            @media (max-width: 420px) {
+                &:last-child {
                     padding-right: 0;
                 }
             }
@@ -163,6 +163,10 @@
     }
     li {
         padding-right: 12px;
+        text-overflow: ellipsis; //образка длинных блоков с текстом
+        overflow: hidden; //прятать выходящий за пределы текст
+        max-width: 250px; //ширина блока с текстом
+        white-space: nowrap; //запрет на перенос текста
         & a {
             color: $p;
             font-size: 12px;

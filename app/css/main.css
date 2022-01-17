@@ -96,8 +96,8 @@ h1 {
   font-size: 40px;
   line-height: 1.2;
   font-weight: 500;
+  letter-spacing: -0.015em;
   color: #2a2a30;
-  margin: 20px 0 30px;
 }
 @media (max-width: 1350px) {
   h1 {
@@ -106,8 +106,26 @@ h1 {
 }
 @media (max-width: 767px) {
   h1 {
-    margin: 15px 0 15px;
     line-height: 1.16;
+  }
+}
+
+p,
+strong {
+  letter-spacing: -0.01em;
+}
+
+.date {
+  color: #8c94a8;
+  font-size: 14px;
+}
+
+.title {
+  margin: 20px 0 30px;
+}
+@media (max-width: 767px) {
+  .title {
+    margin: 15px 0 15px;
   }
 }
 
@@ -117,9 +135,9 @@ h1 {
   -webkit-transform: translate(0px, 50%);
   -ms-transform: translate(0px, 50%);
   transform: translate(0px, 50%);
-  -webkit-transition: all 0.8s ease 0s;
-  -o-transition: all 0.8s ease 0s;
-  transition: all 0.8s ease 0s;
+  -webkit-transition: all 0.8s ease 0.5s;
+  -o-transition: all 0.8s ease 0.5s;
+  transition: all 0.8s ease 0.5s;
 }
 
 .visible-text {
@@ -128,9 +146,9 @@ h1 {
   -ms-transform: translate(0px, 0px);
   transform: translate(0px, 0px);
   visibility: visible;
-  -webkit-transition: all 0.8s ease 0s;
-  -o-transition: all 0.8s ease 0s;
-  transition: all 0.8s ease 0s;
+  -webkit-transition: all 0.8s ease 0.5s;
+  -o-transition: all 0.8s ease 0.5s;
+  transition: all 0.8s ease 0.5s;
 }
 
 .invisible {
@@ -428,6 +446,11 @@ h1 {
 }
 .breadcrumbs li {
   padding-right: 12px;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 250px;
+  white-space: nowrap;
 }
 .breadcrumbs li a {
   color: #8c94a8;
@@ -643,6 +666,7 @@ h1 {
   font-size: 32px;
   line-height: 36px;
   font-weight: 500;
+  letter-spacing: -0.015em;
   color: #282d3c;
   padding-bottom: 30px;
 }
@@ -664,9 +688,6 @@ h1 {
     max-width: 384px;
   }
 }
-.post-card__date {
-  color: #8c94a8;
-}
 @media (any-hover: hover) and (any-pointer: fine) {
   .post-card:hover {
     background-color: #007bfb;
@@ -678,8 +699,117 @@ h1 {
     transition: all 0.5s ease 0s;
   }
   .post-card:hover .post-card__text,
-.post-card:hover .post-card__date {
+.post-card:hover .date {
     color: rgba(255, 255, 255, 0.582);
   }
+}
+
+.page-single {
+  padding-top: 120px;
+}
+@media (max-width: 992px) {
+  .page-single {
+    margin-bottom: -60px;
+  }
+}
+@media (max-width: 420px) {
+  .page-single {
+    padding-top: 90px;
+  }
+}
+.page-single__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding-bottom: 70px;
+  margin-top: 20px;
+}
+@media (max-width: 992px) {
+  .page-single__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+.page-single__content {
+  width: 70%;
+}
+@media (max-width: 992px) {
+  .page-single__content {
+    width: 100%;
+  }
+}
+.page-single__content span {
+  margin: 16px 0 32px;
+  display: block;
+}
+.page-single__content p,
+.page-single__content strong {
+  margin-bottom: 20px;
+}
+.page-single__sidebar {
+  width: 416px;
+  margin-left: 110px;
+  height: auto;
+}
+@media (max-width: 1125px) {
+  .page-single__sidebar {
+    margin-left: 60px;
+  }
+}
+@media (max-width: 992px) {
+  .page-single__sidebar {
+    margin-left: -15px;
+    width: calc(100% + 30px);
+  }
+}
+
+.sidebar {
+  background-color: #f4f6fb;
+  border-radius: 32px;
+  padding: 32px 32px 12px;
+}
+@media (max-width: 992px) {
+  .sidebar {
+    padding-bottom: 32px;
+  }
+}
+.sidebar__title {
+  font-weight: 500;
+  font-size: 20px;
+  color: #282d3c;
+  margin-bottom: 25px;
+}
+.sidebar__post span {
+  display: block;
+  margin-bottom: 20px;
+}
+.sidebar__text {
+  color: #282d3c;
+  line-height: 20px;
+  margin-bottom: 8px;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+@media (any-hover: hover) and (any-pointer: fine) {
+  .sidebar__text:hover {
+    color: #007bfb;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+}
+
+Box-text {
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
 }
 /*# sourceMappingURL=main.css.map */

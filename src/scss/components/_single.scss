@@ -1,0 +1,85 @@
+.page-single {
+    padding-top: 120px;
+    @media (max-width: 992px) {
+        margin-bottom: -60px;
+    }
+    @media (max-width: 420px){
+        padding-top: 90px;
+    }
+    &__inner {
+        display: flex;
+        align-items: flex-start;
+        padding-bottom: 70px;
+        margin-top: 20px;
+        @media (max-width: 992px) {
+            flex-direction: column;
+        }
+    }
+    &__content {
+        width: 70%;
+        @media (max-width: 992px) {
+            width: 100%;
+        }
+        span {
+            margin: 16px 0 32px;
+            display: block;
+        }
+        p,
+        strong {
+            margin-bottom: 20px;
+        }
+    }
+    &__sidebar {
+        width: 416px;
+        margin-left: 110px;
+        height: auto;
+        @media (max-width: 1125px) {
+            margin-left: 60px;
+        }
+        @media (max-width: 992px) {
+            margin-left: -15px;
+            width: calc(100% + 30px);
+        }
+    }
+}
+
+.sidebar {
+    background-color: $bg-main;
+    border-radius: 32px;
+    padding: 32px 32px 12px;
+    @media (max-width: 992px) {
+        padding-bottom: 32px;
+    }
+    &__title {
+        font-weight: 500;
+        font-size: 20px;
+        color: $title;
+        margin-bottom: 25px;
+    }
+    &__inner {
+    }
+    &__post {
+        span {
+            display: block;
+            margin-bottom: 20px;
+        }
+    }
+    &__text {
+        color: $title;
+        line-height: 20px;
+        margin-bottom: 8px;
+        transition: all 0.3s ease 0s;
+        @media (any-hover: hover) and (any-pointer: fine) {
+            &:hover {
+                color: $bg-btn;
+                transition: all 0.3s ease 0s;
+            }
+        }
+    }
+}
+Box-text {
+    text-overflow: ellipsis; //образка длинных блоков с текстом
+    overflow: hidden; //прятать выходящий за пределы текст
+    width: 100%; //ширина блока с текстом
+    white-space: nowrap; //запрет на перенос текста
+}

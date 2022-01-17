@@ -8,13 +8,13 @@
 /***/ (() => {
 
 //Плавное появление тукста при загрузке
-var title = document.querySelector('.title');
-var breadcrumbs = document.querySelector('.breadcrumbs');
+var animText = document.querySelectorAll('.anim-text');
 var anim = document.querySelectorAll('.anim');
 
 window.onload = function () {
-  title.classList.add('visible-text');
-  breadcrumbs.classList.add('visible-text');
+  animText.forEach(function (item) {
+    return item.classList.add('visible-text');
+  });
   anim.forEach(function (item) {
     return item.classList.add('visible');
   });
