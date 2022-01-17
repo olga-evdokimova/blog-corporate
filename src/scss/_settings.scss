@@ -6,7 +6,7 @@ body {
     font-weight: 400;
     color: $p;
     line-height: 1.5;
-    background-color: $bg-main;
+    
 }
 
 //<ОБОЛОЧКА>===========================================================================================================
@@ -29,6 +29,11 @@ body {
     flex: 1 1 auto;
     
 }
+.page-bg{
+background-color: $bg-main;
+padding-bottom: 40px;
+
+}
 //<ОБЩИЕ КЛАССЫ>============================================================================================
 ._blue {
     background-color: $bg-btn !important;
@@ -50,6 +55,7 @@ body {
 h1 {
     @include text-h1;
 }
+
 //Анимация ============================================
 .invisible-text {
     opacity: 0;
@@ -72,6 +78,9 @@ h1 {
     opacity: 1;
     visibility: visible;
     transition: all 0.8s ease 0.3s;
+}
+.box-shadow {
+    box-shadow: 0 4px 4px rgb(0 0 0 / 8%);
 }
 //=============================
 .header-close {
