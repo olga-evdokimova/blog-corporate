@@ -6,7 +6,7 @@
    border-radius: 28px;
    padding: 20px 50px 20px 20px;
    min-height: 340px;
-    transition: all .8s ease 0s;
+   transition: all 0.8s ease 0s;
 
    @media (max-width: 767px) {
       flex: 0 1 100%;
@@ -26,17 +26,21 @@
 
    &__title {
       @include text-h3;
-      padding-bottom: 30px;
+      margin-bottom: 32px;
    }
    &__text {
       color: $p;
-      flex: 1 1 auto;
       margin-bottom: 20px;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      max-height: 98px;
+      overflow: hidden;
+
       @media (max-width: 767px) {
          max-width: 384px;
       }
    }
-  
 
    @media (any-hover: hover) and (any-pointer: fine) {
       &:hover {
@@ -50,7 +54,8 @@
          .date {
             color: rgba(255, 255, 255, 0.582);
          }
-        
       }
    }
 }
+
+

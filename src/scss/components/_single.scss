@@ -3,7 +3,7 @@
     @media (max-width: 992px) {
         margin-bottom: -60px;
     }
-    @media (max-width: 420px){
+    @media (max-width: 420px) {
         padding-top: 90px;
     }
     &__inner {
@@ -69,6 +69,10 @@
         line-height: 20px;
         margin-bottom: 8px;
         transition: all 0.3s ease 0s;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
         @media (any-hover: hover) and (any-pointer: fine) {
             &:hover {
                 color: $bg-btn;
@@ -77,4 +81,3 @@
         }
     }
 }
-
