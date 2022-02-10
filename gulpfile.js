@@ -31,7 +31,7 @@ const avif = require('gulp-avif');
 const mainSass = gulpSass(sass);
 const webpackStream = require('webpack-stream');
 const plumber = require('gulp-plumber');
-
+const ghPages = require('gh-pages');
 // paths
 const srcFolder = './src';
 const buildFolder = './app';
@@ -248,6 +248,11 @@ const toProd = (done) => {
   isProd = true;
   done();
 };
+
+function deploy(cb) {
+  ghPages.publish(path.join(process.cwd(), './app'), cb);
+}
+exports.deploy = deploy;
 
 exports.default = series(clean, htmlInclude, scripts, styles, resources, images, webpImages, avifImages, svgSprites, watchFiles);
 
