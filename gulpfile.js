@@ -248,7 +248,7 @@ const toProd = (done) => {
   isProd = true;
   done();
 };
-
+const path = require('path');
 function deploy(cb) {
   ghPages.publish(path.join(process.cwd(), './app'), cb);
 }
